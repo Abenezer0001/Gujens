@@ -50,7 +50,7 @@ export default function Header() {
       }}
     >
       <div className="container mx-auto px-0 sm:px-2 md:px-4 lg:px-6 m-0 p-0">
-        <div className="flex justify-between items-center py-2 transition-all duration-300" style={{ padding: scrolled ? '0.25rem 0' : '0.5rem 0' }}>
+        <div className="flex justify-between items-center py-2 transition-all duration-300" style={{ padding: scrolled ? '0.5rem 0' : '0.6rem 0', height: scrolled ? '80px' : '90px' }}>
           {/* Mobile hamburger menu button - repositioned for visibility */}
           <div className="block md:hidden order-first" style={{ zIndex: 50, marginLeft: '10px' }}>
             <button
@@ -74,33 +74,35 @@ export default function Header() {
               flexShrink: 0,
               paddingLeft: 0,
               flexGrow: 0,
-              transition: "all 300ms"
+              transition: "all 300ms",
+              display: "flex",
+              alignItems: "center"
             }}
           >
             <Link href="/">
-              <div className="relative h-24 w-72 sm:h-28 sm:w-80 md:h-32 md:w-[28rem] lg:h-36 lg:w-[32rem]" style={{ 
-                height: scrolled ? '120px' : '150px',
-                overflow: 'visible'
-              }}>
-                <div className="absolute left-0 h-full w-1/2" style={{
-                  transform: 'scale(2.2)',
-                  transformOrigin: 'left center',
-                  transition: '0.3s ease-in-out',
-                  marginLeft: '-10px', /* Moved further left */
-                  marginTop: '40px'
-                }}>
-                  <Image 
-                    src="https://res.cloudinary.com/dnizoc474/image/upload/v1746004579/Untitled_design_qew21v.png" 
-                    alt="Gujens & Associates" 
-                    fill
-                    className="object-contain object-left-center"
-                    style={{ 
-                      color: 'transparent',
-                      transition: '0.3s ease-in-out',
-                    }}
-                    priority
-                  />
-                </div>
+              <div 
+                className="relative" 
+                style={{
+                  height: scrolled ? '80px' : '90px',
+                  width: 'auto',
+                  // Using a 3:1 aspect ratio for demonstration
+                  // This should be replaced with the actual aspect ratio of the logo
+                  aspectRatio: '3/1',
+                  marginLeft: '5px',
+                  transition: 'all 0.3s ease-in-out'
+                }}
+              >
+                <Image 
+                  src="https://res.cloudinary.com/dnizoc474/image/upload/v1746176108/guens_logo_bvaesn.jpg" 
+                  alt="Gujens & Associates" 
+                  fill
+                  className="object-contain object-left-center"
+                  style={{ 
+                    color: 'transparent',
+                    transition: 'all 0.3s ease-in-out'
+                  }}
+                  priority
+                />
               </div>
             </Link>
           </motion.div>
@@ -114,7 +116,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{
                 display: "flex",
-                gap: "2rem"
+                gap: "2.5rem"
               }}
             >
               {navItems.map((item, index) => (
@@ -128,7 +130,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="text-black hover:text-gray-800 font-medium transition-colors text-base hover:border-b-2 hover:border-current pb-1"
+                    className="text-black hover:text-gray-800 font-medium transition-colors text-lg hover:border-b-2 hover:border-current pb-1"
                     style={{ color: '#000' }}
                   >
                     {item.name}
@@ -159,7 +161,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-black hover:bg-gray-100 rounded-md"
+                    className="block px-3 py-2 text-lg font-medium text-black hover:bg-gray-100 rounded-md"
                     style={{ color: '#000' }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
