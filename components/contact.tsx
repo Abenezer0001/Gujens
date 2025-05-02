@@ -165,7 +165,14 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-base md:text-lg font-medium">Phone</h4>
-                  <p className="mt-1 text-gray-600 text-sm md:text-base">+60 3 1234 5678</p>
+                  <p className="mt-1 text-gray-600 text-sm md:text-base">
+                    T: +60 (3) 6200 0688<br />
+                    F: +60 (3) 6200 0699
+                  </p>
+                  <p className="mt-2 text-gray-600 text-sm md:text-base">
+                    Further info please call Mr. Sathya<br />
+                    Head of Collection Department
+                  </p>
                 </div>
               </div>
 

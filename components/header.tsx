@@ -51,21 +51,6 @@ export default function Header() {
     >
       <div className="container mx-auto px-0 sm:px-2 md:px-4 lg:px-6 m-0 p-0">
         <div className="flex justify-between items-center py-2 transition-all duration-300" style={{ padding: scrolled ? '0.5rem 0' : '0.6rem 0', height: scrolled ? '80px' : '90px' }}>
-          {/* Mobile hamburger menu button - repositioned for visibility */}
-          <div className="block md:hidden order-first" style={{ zIndex: 50, marginLeft: '10px' }}>
-            <button
-              type="button"
-              className="text-black hover:text-gray-800 transition-colors p-2 bg-white bg-opacity-80 rounded-md shadow-sm"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Open main menu</span>
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6 text-black" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6 text-black" aria-hidden="true" />
-              )}
-            </button>
-          </div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -88,7 +73,6 @@ export default function Header() {
                   // Using a 3:1 aspect ratio for demonstration
                   // This should be replaced with the actual aspect ratio of the logo
                   aspectRatio: '3/1',
-                  marginLeft: '5px',
                   transition: 'all 0.3s ease-in-out'
                 }}
               >
@@ -106,8 +90,23 @@ export default function Header() {
               </div>
             </Link>
           </motion.div>
-          {/* Secondary hamburger button for right side - hidden in this implementation */}
-
+          
+          {/* Mobile hamburger menu button - moved to right side */}
+          <div className="block md:hidden order-last" style={{ zIndex: 50, marginRight: '10px' }}>
+            <button
+              type="button"
+              className="text-black hover:text-gray-800 transition-colors p-2 bg-white bg-opacity-80 rounded-md shadow-sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-black" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6 text-black" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <motion.nav
