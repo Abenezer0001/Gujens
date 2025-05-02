@@ -46,10 +46,12 @@ export default function Header() {
         zIndex: 50,
         transition: "all 300ms",
         margin: 0,
-        padding: 0
+        padding: 0,
+        top: 0,
+        left: 0
       }}
     >
-      <div className="container mx-auto px-0 sm:px-2 md:px-4 lg:px-6 m-0 p-0">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 m-0 p-0">
         <div className="flex justify-between items-center py-2 transition-all duration-300" style={{ padding: scrolled ? '0.5rem 0' : '0.6rem 0', height: scrolled ? '80px' : '90px' }}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -68,10 +70,9 @@ export default function Header() {
               <div 
                 className="relative" 
                 style={{
-                  height: scrolled ? '80px' : '90px',
+                  height: scrolled ? '60px' : '70px',
                   width: 'auto',
-                  // Using a 3:1 aspect ratio for demonstration
-                  // This should be replaced with the actual aspect ratio of the logo
+                  maxWidth: '180px',
                   aspectRatio: '3/1',
                   transition: 'all 0.3s ease-in-out'
                 }}
@@ -92,7 +93,7 @@ export default function Header() {
           </motion.div>
           
           {/* Mobile hamburger menu button - moved to right side */}
-          <div className="block md:hidden order-last" style={{ zIndex: 50, marginRight: '10px' }}>
+          <div className="block md:hidden order-last" style={{ zIndex: 50, marginRight: '0' }}>
             <button
               type="button"
               className="text-black hover:text-gray-800 transition-colors p-2 bg-white bg-opacity-80 rounded-md shadow-sm"
@@ -143,14 +144,14 @@ export default function Header() {
 
       {/* Mobile menu - adjusted for better visibility */}
       {mobileMenuOpen && (
-        <div className="block md:hidden" style={{ zIndex: 40 }}>
+        <div className="block md:hidden" style={{ zIndex: 40, width: '100%' }}>
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white bg-opacity-95 shadow-lg rounded-b-lg">
+            <div className="px-4 pt-2 pb-3 space-y-1 bg-white bg-opacity-95 shadow-lg rounded-b-lg w-full">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}

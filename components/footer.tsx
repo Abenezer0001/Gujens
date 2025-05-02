@@ -26,24 +26,6 @@ export default function Footer() {
             <p className="text-gray-400 mb-4 text-sm md:text-base">
               Professional debt recovery and legal services to secure the financial interests of our clients.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-            </div>
           </motion.div>
 
           <motion.div
