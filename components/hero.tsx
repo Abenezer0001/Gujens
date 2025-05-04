@@ -16,7 +16,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white pt-16">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white pt-16 w-full">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <motion.div
@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
             <motion.div

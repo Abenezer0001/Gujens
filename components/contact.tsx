@@ -42,8 +42,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-16 md:py-20 bg-white w-full">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -70,9 +70,9 @@ export default function Header() {
               <div 
                 className="relative" 
                 style={{
-                  height: scrolled ? '60px' : '70px',
+                  height: scrolled ? '90px' : '100px',
                   width: 'auto',
-                  maxWidth: '180px',
+                  maxWidth: '236px',
                   aspectRatio: '3/1',
                   transition: 'all 0.3s ease-in-out'
                 }}

@@ -13,8 +13,8 @@ export default function About() {
   const opacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
 
   return (
-    <section id="about" className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white overflow-hidden w-full">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div style={{ x: x1, opacity }} className="relative">
             <div className="absolute -top-4 -left-4 w-16 md:w-24 h-16 md:h-24 bg-gray-100 rounded-lg z-0"></div>
